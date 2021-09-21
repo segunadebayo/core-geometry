@@ -1,5 +1,5 @@
-import { rect } from "./create"
-import { Rect } from "./types"
+import { rect } from "."
+import type { Rect } from "./types"
 
 export type WindowRectOptions = {
   /**

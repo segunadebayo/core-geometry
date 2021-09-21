@@ -1,5 +1,5 @@
 import type { PointValue } from "tiny-point"
-import { rect } from "./create"
+import { rect } from "."
 import type { Rect } from "./types"
 
 export function fromPoints(...pts: PointValue[]): Rect {

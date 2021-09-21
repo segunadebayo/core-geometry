@@ -1,6 +1,5 @@
 import type { Point } from "tiny-point"
-import { corners } from "./corner"
-import { isRect } from "./create"
+import { corners, isRect } from "."
 import type { Rect } from "./types"
 
 export function containsPoint(r: Rect, p: Point): boolean {

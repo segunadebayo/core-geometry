@@ -1,7 +1,5 @@
 import { rotate } from "tiny-point"
-import { center } from "./center"
-import { corners } from "./corner"
-import { rect } from "./create"
+import { center, corners, rect } from "."
 import type { Rect } from "./types"
 
 const { min, max } = Math

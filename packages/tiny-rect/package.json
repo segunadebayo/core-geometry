@@ -28,7 +28,6 @@
     "closest",
     "contains",
     "distance",
-    "edge",
     "from-element",
     "from-points",
     "from-range",
@@ -36,7 +35,6 @@
     "from-window",
     "intersection",
     "operations",
-    "point",
     "union"
   ],
   "preconstruct": {
@@ -46,7 +44,6 @@
       "closest.ts",
       "contains.ts",
       "distance.ts",
-      "edge.ts",
       "from-element.ts",
       "from-points.ts",
       "from-range.ts",
@@ -54,7 +51,6 @@
       "from-window.ts",
       "intersection.ts",
       "operations.ts",
-      "point.ts",
       "union.ts"
     ]
   },
