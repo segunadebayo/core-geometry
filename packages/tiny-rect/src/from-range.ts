@@ -17,10 +17,10 @@ export function fromRange(range: Range): Rect {
     }
     if (start instanceof HTMLElement) {
       let r = fromElement(start)
-      r = rect({ ...r, x: r.maxX, width: 0 })
+      r = rect(Object.assign({}, r, { x: r.maxX, width: 0 }))
       rs.push(r)
     }
   }
 
-  return union(...rs)
+  return union.apply(undefined, rs)
 }

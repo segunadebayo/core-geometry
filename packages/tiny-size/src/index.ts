@@ -1,4 +1,4 @@
-const { pow, round: $round } = Math
+const { pow, round: rond } = Math
 
 export type SizeValue = {
   height: number
@@ -10,7 +10,7 @@ export type Size = Readonly<SizeValue>
 export function size(v: SizeValue): Size
 export function size(w: number, h: number): Size
 export function size(...a: any[]): Size {
-  const v = a.length === 1 ? { ...a[0] } : { width: a[0], height: a[1] }
+  const v = a.length === 1 ? Object.assign({}, a[0]) : { width: a[0], height: a[1] }
   return Object.freeze(v)
 }
 
@@ -25,7 +25,7 @@ export function fromSquare(v: number): Size {
 export const zeroSize = size(0, 0)
 
 export function isSize(v: any): v is Size {
-  return typeof v === "object" && "width" in v && "height" in v
+  return Object.prototype.toString.call(v) === "[object Object]" && "width" in v && "height" in v
 }
 
 export function aspectRatio(v: Size): number {
@@ -38,7 +38,7 @@ export function isEmpty(v: Size): boolean {
 
 export function round(v: Size, t = 0) {
   const m = pow(10, t)
-  return size($round(v.width * m) / m, $round(v.height * m) / m)
+  return size(rond(v.width * m) / m, rond(v.height * m) / m)
 }
 
 export function flip(v: Size): Size {

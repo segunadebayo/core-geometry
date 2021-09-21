@@ -7,13 +7,10 @@ export type RectInset = Partial<Record<RectSide, number>>
 
 export type SymmetricRectInset = { dx?: number; dy?: number }
 
-export const isSymmetric = (v: any): v is SymmetricRectInset =>
-  "dx" in v || "dy" in v
+export const isSymmetric = (v: any): v is SymmetricRectInset => "dx" in v || "dy" in v
 
 export function inset(r: Rect, i: RectInset | SymmetricRectInset): Rect {
-  const v = isSymmetric(i)
-    ? { left: i.dx, right: i.dx, top: i.dy, bottom: i.dy }
-    : i
+  const v = isSymmetric(i) ? { left: i.dx, right: i.dx, top: i.dy, bottom: i.dy } : i
   const { top = 0, right = 0, bottom = 0, left = 0 } = v
   return rect(left, top, r.width - left - right, r.height - top - bottom)
 }
@@ -34,5 +31,8 @@ export function shift(r: Rect, o: Partial<PointValue>): Rect {
 }
 
 export function rotate(r: Rect, deg: number, origin: PointValue): Rect {
-  return fromPoints(...corners(r).value.map((p) => rotatePoint(p, deg, origin)))
+  return fromPoints.apply(
+    undefined,
+    corners(r).value.map((p) => rotatePoint(p, deg, origin)),
+  )
 }

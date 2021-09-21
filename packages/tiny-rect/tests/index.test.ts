@@ -13,13 +13,7 @@ describe("tiny-rect", () => {
   })
 
   test("should create rect from point", () => {
-    const r = fromPoints(
-      zeroPoint,
-      { x: 0, y: 50 },
-      { x: 10, y: 50 },
-      { x: 10, y: 0 },
-      { x: 0, y: 0 },
-    )
+    const r = fromPoints(zeroPoint, { x: 0, y: 50 }, { x: 10, y: 50 }, { x: 10, y: 0 }, { x: 0, y: 0 })
     expect(r).toMatchObject({ width: 10, height: 50 })
     expect(r).toMatchInlineSnapshot(`
   Object {

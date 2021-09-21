@@ -42,11 +42,7 @@ export type RectCorners = Record<RectCorner, Point> & {
   value: RectPoints
 }
 
-export type RectCenter =
-  | "topCenter"
-  | "rightCenter"
-  | "leftCenter"
-  | "bottomCenter"
+export type RectCenter = "topCenter" | "rightCenter" | "leftCenter" | "bottomCenter"
 
 export type RectCenters = Record<RectCenter, Point> & {
   value: RectPoints

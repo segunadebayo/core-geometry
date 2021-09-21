@@ -5,10 +5,7 @@ import { getStyle } from "./get-style"
 /**
  * Creates a rectangle from an HTML element
  */
-export function fromElement(
-  el: HTMLElement,
-  opts: ElementRectOptions = {},
-): Rect {
+export function fromElement(el: HTMLElement, opts: ElementRectOptions = {}): Rect {
   return rect(getElementRect(el, opts))
 }
 
@@ -34,12 +31,7 @@ export function getElementRect(el: HTMLElement, opts: ElementRectOptions = {}) {
 
   const style = getStyle(el)
 
-  const {
-    borderLeftWidth,
-    borderTopWidth,
-    borderRightWidth,
-    borderBottomWidth,
-  } = style
+  const { borderLeftWidth, borderTopWidth, borderRightWidth, borderBottomWidth } = style
 
   const borderXWidth = sum(borderLeftWidth, borderRightWidth)
   const borderYWidth = sum(borderTopWidth, borderBottomWidth)
@@ -63,5 +55,4 @@ export function getElementRect(el: HTMLElement, opts: ElementRectOptions = {}) {
 
 const px = (v: string) => parseFloat(v.replace("px", ""))
 
-const sum = (...vals: string[]) =>
-  vals.reduce((sum, v) => sum + (v ? px(v) : 0), 0)
+const sum = (...vals: string[]) => vals.reduce((sum, v) => sum + (v ? px(v) : 0), 0)
