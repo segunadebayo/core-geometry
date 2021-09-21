@@ -6,6 +6,7 @@
     "downlevelIteration": true,
     "esModuleInterop": true,
     "isolatedModules": true,
+    "importHelpers": true,
     "jsx": "preserve",
     "lib": ["dom", "esnext"],
     "module": "esnext",
