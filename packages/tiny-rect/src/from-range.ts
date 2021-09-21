@@ -4,12 +4,10 @@ import type { Rect } from "./types"
 import { union } from "./union"
 
 export function fromRange(range: Range): Rect {
-  const rs: Rect[] = []
+  let rs: Rect[] = []
   const rects = Array.from(range.getClientRects())
   if (rects.length) {
-    for (const r of rects) {
-      rs.push(rect(r))
-    }
+    rs = rs.concat(rects.map((r) => rect(r)))
   } else {
     let start: Node | ParentNode | null = range.startContainer
     if (start.nodeType === Node.TEXT_NODE) {
