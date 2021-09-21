@@ -19,10 +19,6 @@
       "limit": "1.2KB"
     },
     {
-      "path": "packages/tiny-size/**/*.esm.js",
-      "limit": "500B"
-    },
-    {
       "path": "packages/tiny-rect/**/*.esm.js",
       "limit": "3.5KB"
     }
