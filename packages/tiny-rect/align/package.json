@@ -1,0 +1,4 @@
+{
+  "main": "dist/tiny-rect-align.cjs.js",
+  "module": "dist/tiny-rect-align.esm.js"
+}

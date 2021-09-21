@@ -1,0 +1,4 @@
+{
+  "main": "dist/tiny-rect-contains.cjs.js",
+  "module": "dist/tiny-rect-contains.esm.js"
+}

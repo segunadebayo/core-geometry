@@ -1,0 +1,80 @@
+{
+  "name": "tiny-rect",
+  "version": "0.0.0",
+  "description": "JS utilities for managing rects",
+  "keywords": [
+    "js",
+    "utils",
+    "point",
+    "rect",
+    "size",
+    "core graphics",
+    "foundations",
+    "dom",
+    "event",
+    "math",
+    "geometry"
+  ],
+  "author": "Segun Adebayo <sage@adebayosegun.com>",
+  "homepage": "https://github.com/segunadebayo/js-toolkit#readme",
+  "license": "MIT",
+  "main": "dist/tiny-rect.cjs.js",
+  "module": "dist/tiny-rect.esm.js",
+  "repository": "https://github.com/segunadebayo/js-tookit/tree/main/packages/cg-rect",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "align",
+    "center",
+    "closest",
+    "contains",
+    "corner",
+    "create",
+    "distance",
+    "edge",
+    "from-element",
+    "from-points",
+    "from-range",
+    "from-rotation",
+    "from-window",
+    "intersection",
+    "operations",
+    "point",
+    "union"
+  ],
+  "preconstruct": {
+    "entrypoints": [
+      "index.ts",
+      "align.ts",
+      "center.ts",
+      "closest.ts",
+      "contains.ts",
+      "corner.ts",
+      "create.ts",
+      "distance.ts",
+      "edge.ts",
+      "from-element.ts",
+      "from-points.ts",
+      "from-range.ts",
+      "from-rotation.ts",
+      "from-window.ts",
+      "intersection.ts",
+      "operations.ts",
+      "point.ts",
+      "union.ts"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/segunadebayo/js-tookit/issues"
+  },
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "tiny-point": "0.0.0",
+    "tiny-size": "0.0.0"
+  }
+}

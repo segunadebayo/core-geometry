@@ -1,0 +1,4 @@
+{
+  "main": "dist/tiny-rect-union.cjs.js",
+  "module": "dist/tiny-rect-union.esm.js"
+}

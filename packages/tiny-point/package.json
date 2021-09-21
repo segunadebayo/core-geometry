@@ -1,0 +1,46 @@
+{
+  "name": "tiny-point",
+  "version": "0.0.0",
+  "description": "JS utility to manage a point in a two-dimensional system",
+  "keywords": [
+    "js",
+    "utils",
+    "point",
+    "core graphics",
+    "foundations",
+    "dom",
+    "event",
+    "math",
+    "geometry"
+  ],
+  "author": "Segun Adebayo <sage@adebayosegun.com>",
+  "homepage": "https://github.com/segunadebayo/js-toolkit#readme",
+  "license": "MIT",
+  "main": "dist/tiny-point.cjs.js",
+  "module": "dist/tiny-point.esm.js",
+  "repository": "https://github.com/segunadebayo/core-geometry/core/tree/main/packages/cg-point",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "closest",
+    "from-event",
+    "relative"
+  ],
+  "preconstruct": {
+    "entrypoints": [
+      "index.ts",
+      "closest.ts",
+      "from-event.ts",
+      "relative.ts"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/segunadebayo/core-geometry/issues"
+  },
+  "scripts": {
+    "clean": "rimraf dist"
+  }
+}
