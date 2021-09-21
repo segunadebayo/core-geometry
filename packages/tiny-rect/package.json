@@ -25,11 +25,8 @@
   "files": [
     "dist",
     "align",
-    "center",
     "closest",
     "contains",
-    "corner",
-    "create",
     "distance",
     "edge",
     "from-element",
@@ -46,11 +43,8 @@
     "entrypoints": [
       "index.ts",
       "align.ts",
-      "center.ts",
       "closest.ts",
       "contains.ts",
-      "corner.ts",
-      "create.ts",
       "distance.ts",
       "edge.ts",
       "from-element.ts",

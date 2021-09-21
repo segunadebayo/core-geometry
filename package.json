@@ -15,13 +15,16 @@
   },
   "size-limit": [
     {
-      "path": "packages/tiny-point/dist/tiny-point.esm.js"
+      "path": "packages/tiny-point/**/*.esm.js",
+      "limit": "1.2KB"
     },
     {
-      "path": "packages/tiny-size/dist/tiny-size.esm.js"
+      "path": "packages/tiny-size/**/*.esm.js",
+      "limit": "500B"
     },
     {
-      "path": "packages/tiny-rect/dist/tiny-rect.esm.js"
+      "path": "packages/tiny-rect/**/*.esm.js",
+      "limit": "3.5KB"
     }
   ],
   "scripts": {

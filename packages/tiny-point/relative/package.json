@@ -1,4 +1,0 @@
-{
-  "main": "dist/tiny-point-relative.cjs.js",
-  "module": "dist/tiny-point-relative.esm.js"
-}

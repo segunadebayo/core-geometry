@@ -22,16 +22,12 @@
   "sideEffects": false,
   "files": [
     "dist",
-    "closest",
-    "from-event",
-    "relative"
+    "dom"
   ],
   "preconstruct": {
     "entrypoints": [
       "index.ts",
-      "closest.ts",
-      "from-event.ts",
-      "relative.ts"
+      "dom.ts"
     ]
   },
   "publishConfig": {

@@ -1,4 +1,0 @@
-{
-  "main": "dist/tiny-rect-create.cjs.js",
-  "module": "dist/tiny-rect-create.esm.js"
-}

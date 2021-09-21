@@ -1,0 +1,4 @@
+{
+  "main": "dist/tiny-point-dom.cjs.js",
+  "module": "dist/tiny-point-dom.esm.js"
+}
