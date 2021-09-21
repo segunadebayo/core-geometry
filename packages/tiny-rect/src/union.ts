@@ -3,9 +3,6 @@ import type { Rect } from "./types"
 
 const { min, max } = Math
 
-/**
- * Returns a new Rect that represents the union between multiple Rects
- */
 export function union(...rs: Rect[]): Rect {
   const pMin = {
     x: min.apply(

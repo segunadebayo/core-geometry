@@ -1,7 +1,11 @@
-import type { Point, PointValue } from "tiny-point"
-import type { Size, SizeValue } from "tiny-size"
+import type { Point } from "tiny-point"
 
-export type RectValue = PointValue & SizeValue
+export type RectValue = {
+  x: number
+  y: number
+  width: number
+  height: number
+}
 
 export type RectDerivedValue = {
   area: number
@@ -13,7 +17,7 @@ export type RectDerivedValue = {
   maxY: number
 }
 
-export type Rect = Point & Size & Readonly<RectDerivedValue>
+export type Rect = Readonly<RectValue & RectDerivedValue>
 
 export type RectSide = "top" | "right" | "bottom" | "left"
 

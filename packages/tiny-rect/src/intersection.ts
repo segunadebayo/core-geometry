@@ -1,4 +1,4 @@
-import { rect } from "."
+import { rect } from "./create"
 import type { Rect, RectSide } from "./types"
 
 const { min, max } = Math

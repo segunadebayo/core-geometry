@@ -68,7 +68,6 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "tiny-point": "0.0.0",
-    "tiny-size": "0.0.0"
+    "tiny-point": "0.0.0"
   }
 }
