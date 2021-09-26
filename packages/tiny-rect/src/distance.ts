@@ -1,4 +1,5 @@
-import { distance, PointValue } from "tiny-point"
+import { PointValue } from "tiny-point"
+import { distance } from "tiny-point/distance"
 import { intersects } from "./intersection"
 import type { Rect, RectSide } from "./types"
 
