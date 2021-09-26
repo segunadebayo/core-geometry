@@ -1,4 +1,5 @@
-import { add, distance, point, round, closest } from "../src"
+import { add, point, round } from "../src"
+import { closest, distance } from "../src/distance"
 
 describe("Point", () => {
   test("should create a point", () => {

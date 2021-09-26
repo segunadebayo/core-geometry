@@ -1,0 +1,4 @@
+{
+  "main": "dist/tiny-point-distance.cjs.js",
+  "module": "dist/tiny-point-distance.esm.js"
+}

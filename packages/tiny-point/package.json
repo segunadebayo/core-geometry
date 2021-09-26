@@ -22,12 +22,16 @@
   "sideEffects": false,
   "files": [
     "dist",
-    "dom"
+    "dom",
+    "distance",
+    "within"
   ],
   "preconstruct": {
     "entrypoints": [
       "index.ts",
-      "dom.ts"
+      "dom.ts",
+      "distance.ts",
+      "within.ts"
     ]
   },
   "publishConfig": {

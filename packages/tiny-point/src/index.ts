@@ -1,9 +1,4 @@
-export type PointValue = {
-  x: number
-  y: number
-}
-
-export type Point = Readonly<PointValue>
+import { Point, PointValue } from "./types"
 
 export function point(v: PointValue): Point
 export function point(x: number, y: number): Point
@@ -11,25 +6,21 @@ export function point(...a: any[]): Point {
   const v = a.length === 1 ? Object.assign({}, a[0]) : { x: a[0], y: a[1] }
   return Object.freeze(v)
 }
-
+ 
 export function isPoint(v: any): v is Point {
   return Object.prototype.toString.call(v) === "[object Object]" && "x" in v && "y" in v
 }
 
-export const zeroPoint = point(0, 0)
-
-const { cos, sin, pow, round: rond, PI, sqrt, hypot, atan2, min } = Math
-
 export function toDeg(r: number) {
-  return ((180 * r) / PI) % 360
+  return ((180 * r) / Math.PI) % 360
 }
 
 export function toRad(d: number) {
-  return ((d % 360) * PI) / 180
+  return ((d % 360) * Math.PI) / 180
 }
 
 export function angleBetween(a: Point, b: Point): number {
-  return atan2(a.y - b.y, a.x - b.x)
+  return Math.atan2(a.y - b.y, a.x - b.x)
 }
 
 export function lerp(a: Point, b: Point, t: number): Point {
@@ -58,26 +49,24 @@ export function negate(a: Point): Point {
 
 export function rotate(a: Point, d: number, c: Point): Point {
   const r = toRad(d)
+  const sin = Math.sin(r)
+  const cos = Math.cos(r)
   const x = a.x - c.x
   const y = a.y - c.y
-  return point(c.x + x * cos(r) - y * sin(r), c.y + x * sin(r) + y * cos(r))
+  return point(c.x + x * cos - y * sin, c.y + x * sin + y * cos)
 }
 
 export function round(a: Point, t: number): Point {
-  const m = pow(10, t)
-  return point(rond(a.x / m) * m, rond(a.y / m) * m)
+  const m = Math.pow(10, t)
+  return point(Math.round(a.x / m) * m, Math.round(a.y / m) * m)
 }
 
-export function snap(a: Point, grid: number): Point {
-  return point(rond(a.x / grid) * grid, rond(a.y / grid) * grid)
-}
-
-export function distance(a: Point, b: Point = zeroPoint): number {
-  return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2))
+export function snapToGrid(a: Point, grid: number): Point {
+  return point(Math.round(a.x / grid) * grid, Math.round(a.y / grid) * grid)
 }
 
 export function length(a: Point): number {
-  return hypot(a.x, a.y)
+  return Math.hypot(a.x, a.y)
 }
 
 export function mid(a: Point, b: Point): Point {
@@ -96,10 +85,4 @@ export function dot(a: Point) {
   return a.x * a.x + a.y * a.y
 }
 
-export function closest(...pts: Point[]) {
-  return (a: Point): Point => {
-    const ds = pts.map((b) => distance(b, a))
-    const c = min.apply(Math, ds)
-    return pts[ds.indexOf(c)]
-  }
-}
+export type { Point, PointValue }
