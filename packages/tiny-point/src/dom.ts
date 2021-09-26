@@ -1,12 +1,15 @@
 import type { Point } from "."
 import { point } from "."
 
-const isTouchEvent = (e: any): e is TouchEvent => typeof e === "object" && "touches" in e
+const isObj = (e: any): e is Record<string, any> => Object.prototype.toString.call(e) === "[object Object]"
+
+const isTouchEvent = (e: any): e is TouchEvent => isObj(e) && "touches" in e
 type PointType = "page" | "client"
 type Event = MouseEvent | TouchEvent | PointerEvent
 
+const fallback = { pageX: 0, pageY: 0, clientX: 0, clientY: 0 }
+
 export function fromPointerEvent(e: Event, t: PointType = "page"): Point {
-  const fallback = { [`${t}X`]: 0, [`${t}Y`]: 0 }
   const p = isTouchEvent(e) ? e.touches[0] || e.changedTouches[0] || fallback : e
   return point(p[`${t}X`], p[`${t}Y`])
 }
