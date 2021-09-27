@@ -1,0 +1,4 @@
+{
+  "main": "dist/tiny-point-angle.cjs.js",
+  "module": "dist/tiny-point-angle.esm.js"
+}
