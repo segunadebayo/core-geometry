@@ -24,6 +24,7 @@
     "dist",
     "dom",
     "distance",
+    "angle",
     "within"
   ],
   "preconstruct": {
@@ -31,7 +32,8 @@
       "index.ts",
       "dom.ts",
       "distance.ts",
-      "within.ts"
+      "within.ts",
+      "angle.ts"
     ]
   },
   "publishConfig": {
