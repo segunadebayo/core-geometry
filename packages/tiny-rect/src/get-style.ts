@@ -1,7 +1,3 @@
-/**
- * Get computed style of an element
- */
-
 const cache: WeakMap<HTMLElement, CSSStyleDeclaration> = new WeakMap()
 
 export function getStyle(el: HTMLElement): CSSStyleDeclaration {

@@ -1,4 +1,4 @@
-import { rotate } from "tiny-point"
+import { rotate } from "tiny-point/angle"
 import { center, corners, rect } from "."
 import type { Rect } from "./types"
 

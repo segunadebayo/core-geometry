@@ -1,4 +1,5 @@
-import { PointValue, rotate as rotatePoint } from "tiny-point"
+import type { PointValue } from "tiny-point"
+import { rotate as rotatePoint } from "tiny-point/angle"
 import { corners, rect } from "."
 import { fromPoints } from "./from-points"
 import type { Rect, RectSide } from "./types"
