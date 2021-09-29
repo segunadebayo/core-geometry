@@ -13,7 +13,7 @@ export const isSymmetric = (v: any): v is SymmetricRectInset => "dx" in v || "dy
 export function inset(r: Rect, i: RectInset | SymmetricRectInset): Rect {
   const v = isSymmetric(i) ? { left: i.dx, right: i.dx, top: i.dy, bottom: i.dy } : i
   const { top = 0, right = 0, bottom = 0, left = 0 } = v
-  return rect(left, top, r.width - left - right, r.height - top - bottom)
+  return rect(r.x + left, r.y + top, r.width - left - right, r.height - top - bottom)
 }
 
 export function expand(r: Rect, v: number | SymmetricRectInset): Rect {
